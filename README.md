@@ -1,7 +1,7 @@
 # Nifi
 AutoDeploymentScript:
 
-This powerShell script lets you deploy nifi data flows into various environment. It uses Nifi-Registry and Nifi-Toolkit to deploy the flows.
+This powerShell script lets you deploy nifi data flows into various environment. It uses Nifi-Registry and Nifi-Toolkit to deploy the flows. If deployment fails for any reason, script has smtp setup to send emails. One needs to add the setup parameters for it in the script.
 
     
 <b>#DESCRIPTION :</b>
