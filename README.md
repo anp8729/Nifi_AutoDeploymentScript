@@ -34,3 +34,5 @@ default path is NifiEnvironmentProperties directory
     C:\PS> .\AutoDeployment.ps1 -env prod -flow DataTransform 
 
 Script is properly commented for better understanding.
+
+One need to replicate properties file in NifiEnvironmentProperties directory for respective enviornment. The name should be int he customProperties_<env>.json format. (replace env with dev,prod,stage,qa etc). The sample file contains setup variables for SMTP processor, PutSNS processor and DBCPConnectionPool controller service . Each json key should exactly match the processor variable names in nifi flow. 
