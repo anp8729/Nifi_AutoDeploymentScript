@@ -44,5 +44,10 @@ One need to replicate properties file in NifiEnvironmentProperties directory for
  
 #Registry Bucket Names
 The from environment variable fromEnv in script should match exactly with the bucket name in registry. (Update it as per ur bucket names)
+
+Update NifiEnvironmentProperties -fp directory path inside script to the directory it is saved in or pass it as an argument.
+
+#Assumption:
+This script assumes you have Nifi Registry instance running and minimally the dev environment has the nifi-registry client setup. All the higher environments , if the client is not set up the script will try to set it up while trying to deploy.
     
 
