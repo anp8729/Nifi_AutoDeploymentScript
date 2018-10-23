@@ -4,63 +4,63 @@ AutoDeploymentScript:
 This powerShell script lets you deploy nifi data flows into various environment. It uses Nifi-Registry and Nifi-Toolkit to deploy the flows.
 
     
-#DESCRIPTION :
+<b>#DESCRIPTION :</b>
     
-#ScriptParameters: 
+<b>#ScriptParameters: </b>
 
-#PARAMETER env:
+<b>#PARAMETER env:</b>
 
  Accepted values prod,qa,stage Environement where the flow is to be deployed
 
-#PARAMETER tp:
+<b>#PARAMETER tp:</b>
 
 Optional parameter. path to nifi toolkit 
 
-#PARAMETER flow:
+<b>#PARAMETER flow:</b>
 
 Name of the data flow (same as the one in the registry) to be deployed
    
-#PARAMETER fv:
+<b>#PARAMETER fv:</b>
 
 Optional parameter. Version number to be deployed. If not provided it will deploy latest version 
 
-#PARAMETER r:
+<b>#PARAMETER r:</b>
 
 Optional parameter. Path to nifi registry instance
    
-#PARAMETER u:
+<b>#PARAMETER u:</b>
 
 Optional parameter. Path to nifi (link to nifi instance) where the flow is to be deployed
 eg http://Prod-Nifi:8080 
    
-#PARAMETER fp:
+<b>#PARAMETER fp:</b>
 
 Optional parameter. Path to nifi variable properties json file based on environment 
 default path is NifiEnvironmentProperties directory 
   
-#EXAMPLE:
+<b>#EXAMPLE:</b>
 
     C:\PS> .\AutoDeployment.ps1 -env prod -flow DataTransform 
 
-#FurtherHelp:
+<b>#FurtherHelp:</b>
 
 Script is properly commented for better understanding.
 
-#NifiEnvironmentProperties:
+<b>#NifiEnvironmentProperties:</b>
 
-One needs to replicate properties file in NifiEnvironmentProperties directory for respective enviornment. The name should be int he customProperties_<env>.json format. (replace env with dev,prod,stage,qa etc). The sample file contains setup variables for SMTP processor, PutSNS processor and DBCPConnectionPool controller service . Each json key should exactly match the processor variable names in nifi flow. 
+One needs to replicate properties file in <b>NifiEnvironmentProperties</b> directory for respective enviornment. The name should be in the <b>customProperties_<env>.json </b> format. (replace env with dev,prod,stage,qa etc). The sample file <b>customProperties_dev.json</b> contains setup variables for SMTP processor, PutSNS processor and DBCPConnectionPool controller service . Each json key should exactly match the processor variable names in nifi flow. 
     
- #Script:
+ <b>#Script:</b>
  
- The script restrict deployment to various environment from the specific environment . like dev will always be deployed to QA, QA will be deployed to stage and stage to prod resply.
+The script restricts deployment to various environment from the specific environment . Example dev will always be deployed to QA, QA will be deployed to stage and stage to prod resply.
  
-#Registry Bucket Names:
+<b>#Registry Bucket Names:</b>
 
-The from environment variable fromEnv in script should match exactly with the bucket name in registry. (Update it as per ur bucket names)
+The from environment variable <b>fromEnv</b> in script should match exactly with the bucket name in registry. (Update it as per ur bucket names)
 
-Update NifiEnvironmentProperties -fp directory path inside script to the directory it is saved in or pass it as an argument.
+Update NifiEnvironmentProperties <b>-fp</b> directory path inside script to the directory it is saved in or pass it as an argument.
 
-#Assumption:
+<b>#Assumption:</b>
 
 This script assumes you have Nifi Registry instance running and minimally the dev environment has the nifi-registry client setup. All the higher environments , if the client is not set up the script will try to set it up while trying to deploy.
     
