@@ -31,7 +31,7 @@ Optional parameter. Path to nifi registry instance
 <b>#PARAMETER u:</b>
 
 Optional parameter. Path to nifi (link to nifi instance) where the flow is to be deployed
-eg http://Prod-Nifi:8080 
+eg http://Fake-Prod-Nifi:8080 
    
 <b>#PARAMETER fp:</b>
 
