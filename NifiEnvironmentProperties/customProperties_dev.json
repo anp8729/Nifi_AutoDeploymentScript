@@ -1,0 +1,15 @@
+{
+      "FromEmailAddress" : "",
+      "SMTPEnableSsl" : "true",
+      "SMTPAuth" : "true",
+      "SqlUserName" : "",
+      "SMTPHostname" : "",
+      "AWSSecretKey" : "",
+      "SMTPPort" : "587",
+      "SMTPPassword" : "",
+      "AWSAccessKey" : "",
+      "SqlConnection" : "",
+      "SqlPassword" : "",
+      "ToEmailAddress" : "",
+      "SMTPUserName" : ""
+}
