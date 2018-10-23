@@ -59,6 +59,7 @@ The script restricts deployment to various environment from the specific environ
 The from environment variable <b>fromEnv</b> in script should match exactly with the bucket name in registry. (Update it as per ur bucket names)
 
 Update NifiEnvironmentProperties <b>-fp</b> directory path inside script to the directory it is saved in or pass it as an argument.
+Also update the toolkit and registry paths. (Make sure all the defaults are updated to specific values)
 
 <b>#Assumption:</b>
 
