@@ -360,6 +360,7 @@ Clean-Memory;
 }
 Catch
 {
+	#SMTP setup for deployment failure emails
     $Exception = $_.Exception;
     $ErrorMessage = $_.Exception.Message;
     $FailedItem = $_.Exception.ItemName;
