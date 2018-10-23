@@ -48,7 +48,7 @@ Script is properly commented for better understanding.
 
 <b>#NifiEnvironmentProperties:</b>
 
-One needs to replicate properties file in <b>NifiEnvironmentProperties</b> directory for respective enviornment. The name should be in the <b>customProperties_<env>.json </b> format. (replace env with dev,prod,stage,qa etc). The sample file <b>customProperties_dev.json</b> contains setup variables for SMTP processor, PutSNS processor and DBCPConnectionPool controller service . Each json key should exactly match the processor variable names in nifi flow. 
+One needs to replicate properties file in <b>NifiEnvironmentProperties</b> directory for respective enviornment. The name should be in the <b>customProperties_env.json </b> format. (replace env with dev,prod,stage,qa etc). The sample file <b>customProperties_dev.json</b> contains setup variables for SMTP processor, PutSNS processor and DBCPConnectionPool controller service . Each json key should exactly match the processor variable names in nifi flow. 
     
  <b>#Script:</b>
  
