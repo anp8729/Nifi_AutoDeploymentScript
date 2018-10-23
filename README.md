@@ -1,5 +1,5 @@
 # Nifi
-AutoDeploymentScript:
+<b>AUTODEPLOYMENTSCRIPT:</b>
 
 This powerShell script lets you deploy nifi data flows into various environment. It uses Nifi-Registry and Nifi-Toolkit to deploy the flows. If deployment fails for any reason, script has smtp setup to send emails. One needs to add the setup parameters for it in the script.
 
@@ -42,26 +42,26 @@ default path is NifiEnvironmentProperties directory
 
     C:\PS> .\AutoDeployment.ps1 -env prod -flow DataTransform 
 
-<b>#FurtherHelp:</b>
+<b>#FURTHERHELP:</b>
 
 Script is properly commented for better understanding.
 
-<b>#NifiEnvironmentProperties:</b>
+<b>#FLOW VARIABLES:</b>
 
 One needs to replicate properties file in <b>NifiEnvironmentProperties</b> directory for respective enviornment. The name should be in the <b>customProperties_env.json </b> format. (replace env with dev,prod,stage,qa etc). The sample file <b>customProperties_dev.json</b> contains setup variables for SMTP processor, PutSNS processor and DBCPConnectionPool controller service . Each json key should exactly match the processor variable names in nifi flow. 
     
- <b>#Script:</b>
+ <b>#SCRIPT:</b>
  
 The script restricts deployment to various environment from the specific environment . Example dev will always be deployed to QA, QA will be deployed to stage and stage to prod resply.
  
-<b>#Registry Bucket Names:</b>
+<b>#REGISTRY BUCKET NAMES:</b>
 
 The from environment variable <b>fromEnv</b> in script should match exactly with the bucket name in registry. (Update it as per ur bucket names)
 
 Update NifiEnvironmentProperties <b>-fp</b> directory path inside script to the directory it is saved in or pass it as an argument.
 Also update the toolkit and registry paths. (Make sure all the defaults are updated to specific values)
 
-<b>#Assumption:</b>
+<b>#ASSUMPTIONS:</b>
 
 This script assumes you have Nifi Registry instance running and minimally the dev environment has the nifi-registry client setup. All the higher environments , if the client is not set up the script will try to set it up while trying to deploy.
     
