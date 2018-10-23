@@ -32,3 +32,5 @@ default path is NifiEnvironmentProperties directory
   
 #EXAMPLE
     C:\PS> .\AutoDeployment.ps1 -env prod -flow DataTransform 
+
+Script is properly commented for better understanding.
