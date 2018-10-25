@@ -1,3 +1,8 @@
 theme: jekyll-theme-slate
 plugins:
   - jekyll-seo-tag
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-feed
